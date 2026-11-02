@@ -1,5 +1,8 @@
+```gitignore
+# =========================
 # Logs
-logs
+# =========================
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +10,84 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# =========================
+# React / Vite Frontend
+# =========================
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# =========================
+# Environment Files / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Spring Boot / Maven Backend
+# =========================
+study_together/target/
+
+# Keep real database and email credentials private
+study_together/src/main/resources/application.properties
+
+# =========================
+# Eclipse Files
+# =========================
+study_together/.settings/
+study_together/.classpath
+study_together/.project
+study_together/.factorypath
+
+# =========================
+# VS Code
+# =========================
 .vscode/*
 !.vscode/extensions.json
-.idea
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+
+# =========================
+# Windows / IDE Files
+# =========================
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+### Next steps
+
+**1. Save the file**
+- Open `.gitignore` in Notepad.
+- Replace its contents with the complete file above.
+- Save and close Notepad.
+
+**2. Stage the updated `.gitignore`**
+
+Run this in CMD from your project folder:
+
+```cmd
+git add .gitignore
+```
+
+**3. Verify the real configuration file is ignored**
+
+Run:
+
+```cmd
+git status
+```
+
+Your real `application.properties` should not appear under **Changes to be committed**.
+
+**Important:** Your Gmail App Password was shared in this conversation. Revoke it and generate a new one before using Gmail password-reset functionality again. Keep all real passwords private.
+
+Send me your new `git status` output, and we'll continue with the GitHub upload.
